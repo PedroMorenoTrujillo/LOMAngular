@@ -1,4 +1,10 @@
 <app-quiz-header></app-quiz-header>
-<div class="row text-white h-100 d-flex align-items-center">
-
+<div class="row text-white h-100 d-flex align-items-center justify-content-center rounded">
+  <div class="questionsContainer">
+    <ng-container *ngIf="!showQuizResume">
+      <app-question-container [quizQuestion]="quizQuestions[index]" (questionResult)="questionResult($event)"></app-question-container>
+      <button type="button" class="btn btn-light px-5 fw-bold mt-2 mb-4" *ngIf="showNextQuestion" (click)="nextQuestion()">{{index === (quizQuestions.length - 1) ? 'Ver Resultados!!': 'Siguiente!!'}}</button>
+    </ng-container>
+    <app-question-resume *ngIf="showQuizResume" [quizQuestions]="quizQuestions"></app-question-resume>
+  </div>
 </div>

@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizHeaderComponent implements OnInit {
 
-  success: number = 0;
-  fail: number = 0;
+  correct: number = 0;
+  incorrect: number = 0;
 
   constructor() { }
 

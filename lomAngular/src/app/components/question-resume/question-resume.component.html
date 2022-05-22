@@ -1,0 +1,9 @@
+<div class="row d-flex justify-content-center bg-dark rounded">
+  <div *ngFor="let question of quizQuestions" class="my-3">
+    <div>Pregunta {{question.id}}</div>
+    <div>
+      <span *ngIf="question.success">Tu respuesta fue la correcta: <span class="text-success fw-bold">{{question.userAnswer}}</span></span>
+      <span *ngIf="!question.success">Tu respuesta fue erronea: <span class="text-danger">{{question.userAnswer}}</span></span>
+    </div>
+  </div>
+</div>
