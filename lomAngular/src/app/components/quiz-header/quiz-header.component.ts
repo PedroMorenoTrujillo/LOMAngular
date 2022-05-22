@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { QuizResults } from './tools/results.model';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-quiz-header',
@@ -7,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizHeaderComponent implements OnInit {
 
-  correct: number = 0;
-  incorrect: number = 0;
+  @Input() results: QuizResults = {correct: 0, incorrect: 0};
 
   constructor() { }
 

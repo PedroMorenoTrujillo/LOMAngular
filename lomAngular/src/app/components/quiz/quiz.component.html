@@ -1,10 +1,18 @@
-<app-quiz-header></app-quiz-header>
-<div class="row text-white h-100 d-flex align-items-center justify-content-center rounded">
-  <div class="questionsContainer">
-    <ng-container *ngIf="!showQuizResume">
-      <app-question-container [quizQuestion]="quizQuestions[index]" (questionResult)="questionResult($event)"></app-question-container>
-      <button type="button" class="btn btn-light px-5 fw-bold mt-2 mb-4" *ngIf="showNextQuestion" (click)="nextQuestion()">{{index === (quizQuestions.length - 1) ? 'Ver Resultados!!': 'Siguiente!!'}}</button>
-    </ng-container>
-    <app-question-resume *ngIf="showQuizResume" [quizQuestions]="quizQuestions"></app-question-resume>
+<div class="row h-100">
+  <app-quiz-header [results]="results"></app-quiz-header>
+  <div class="row text-white d-flex align-items-center justify-content-center rounded mx-0 mainWrapper">
+    <div class="questionsContainer">
+      <ng-container *ngIf="!showQuizResume">
+        <app-question-container [quizQuestion]="quizQuestions[index]" (questionResult)="questionResult($event)"></app-question-container>
+        <button type="button" class="btn btn-light px-5 fw-bold mt-2 mb-4" *ngIf="showNextQuestion" (click)="nextQuestion()">{{index === (quizQuestions.length - 1) ? 'Ver Resultados!!': 'Siguiente!!'}}</button>
+      </ng-container>
+      <ng-container *ngIf="showQuizResume">
+        <div [ngClass]="{'bg-danger': results.correct < results.incorrect, 'bg-success': results.correct > results.incorrect}" class="p-4 rounded my-3">
+          <span>{{results.correct < results.incorrect ? 'FIN DE LA HUMANIDAD!!!' : 'NOS SALVAMOS!!!'}}</span>
+        </div>
+        <app-question-resume  [quizQuestions]="quizQuestions"></app-question-resume>
+        <button type="button" class="btn btn-light px-5 fw-bold my-4" [routerLink]="backToIntro">Volver a intentarlo</button>
+      </ng-container>
+    </div>
   </div>
 </div>

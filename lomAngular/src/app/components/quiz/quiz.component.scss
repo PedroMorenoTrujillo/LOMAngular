@@ -1,3 +1,14 @@
 .questionsContainer{
   max-width: 30rem;
 }
+
+.mainWrapper{
+  height: calc(100% - 4rem);
+  overflow-y: auto;
+}
+
+app-quiz-header{
+  ::ng-deep{
+    height: 4rem;
+  }
+}
