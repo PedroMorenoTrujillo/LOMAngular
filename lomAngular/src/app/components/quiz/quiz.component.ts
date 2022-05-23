@@ -10,7 +10,7 @@ import { quizQuestions } from './tools';
 })
 export class QuizComponent implements OnInit {
 
-  quizQuestions: QuizQuestion[] = quizQuestions;
+  quizQuestions: QuizQuestion[] = JSON.parse(JSON.stringify(quizQuestions));
   index: number = 0;
   showNextQuestion: boolean = false;
   showQuizResume: boolean = false;
@@ -32,7 +32,6 @@ export class QuizComponent implements OnInit {
 
   questionResult(quizQuestion: QuizQuestion): void{
     this.showNextQuestion = true;
-    console.log(this.quizQuestions)
     this.score(quizQuestion);
   }
 
