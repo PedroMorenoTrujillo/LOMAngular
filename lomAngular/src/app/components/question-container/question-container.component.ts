@@ -1,6 +1,6 @@
-import { Answers } from './../tools/questions';
+import { Answers } from '../../tools/questions';
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
-import { QuizQuestion } from '../tools';
+import { QuizQuestion } from '../../tools';
 import { EmptyError } from 'rxjs';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MainComponentTitles } from '../tools';
+import { MainComponentTitles } from '../../tools';
 
 @Component({
   selector: 'app-introduction',
@@ -10,7 +10,7 @@ export class IntroductionComponent implements OnInit {
 
   mainTexts = MainComponentTitles;
   nextRoute: string = '/quiz';
-  
+
   constructor() { }
 
   ngOnInit(): void {

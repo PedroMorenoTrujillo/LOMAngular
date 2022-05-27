@@ -1,4 +1,4 @@
-import { QuizQuestion } from "../../tools";
+import { QuizQuestion } from "../../../tools";
 
 export enum QuestionsAndCorrectAnswers{
     LongRiver = '¿Cuál es el río más largo del mundo?',

@@ -1,6 +1,6 @@
 import { QuizResults } from './../quiz-header/tools/results.model';
 import { Component, Input, OnInit } from '@angular/core';
-import { QuizQuestion } from '../tools';
+import { QuizQuestion } from '../../tools';
 import { quizQuestions } from './tools';
 
 @Component({

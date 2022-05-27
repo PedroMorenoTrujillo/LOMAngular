@@ -1,4 +1,4 @@
-import { QuizQuestion } from './../tools/questions';
+import { QuizQuestion } from '../../tools/questions';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
