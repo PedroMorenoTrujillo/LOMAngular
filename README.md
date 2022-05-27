@@ -1,5 +1,5 @@
 # LOMAngular
 LOM test Angular
 
-Netlifly:
+Netlify:
 https://lom-angular-pmt.netlify.app/
